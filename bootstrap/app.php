@@ -79,8 +79,12 @@ $app->singleton(
 */
 
 // $app->register(App\Providers\AppServiceProvider::class);
- $app->register(App\Providers\AuthServiceProvider::class);
+// $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
+ $app->register('Tymon\JWTAuth\Providers\JWTAuthServiceProvider');
+
+ class_alias('Tymon\JWTAuth\Facades\JWTAuth', 'JWTAuth');
+ class_alias('Tymon\JWTAuth\Facades\JWTFactory', 'JWTFactory');
 
 /*
 |--------------------------------------------------------------------------

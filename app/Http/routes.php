@@ -14,5 +14,5 @@
 $app->get('/', function () use ($app) {
     //return $app->version();
 
-    dd(\Auth::guest());
+    dd($app);
 });
