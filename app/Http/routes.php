@@ -1,4 +1,5 @@
 <?php
+$api = app(Dingo\Api\Routing\Router::class  );
 
 /*
 |--------------------------------------------------------------------------
@@ -11,8 +12,13 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    //return $app->version();
+$api->version('v1', function($api) {
+        $api->post('test', function() use ($api) {
+            dd($api);
+        });
+});
+$app->get('bla', function () use ($app) {
+    return $app->version();
 
-    dd($app);
+    //dd($app);
 });
