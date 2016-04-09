@@ -15,5 +15,14 @@ $factory->define(App\User::class, function ($faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
+        'password' => $faker->name,
+    ];
+});
+
+$factory->define(App\Spending::class, function($faker) {
+    return [
+        'user_id' => 1,
+        'amount' => $faker->numberBetween($min = 1000, $max = 9000),
+        'description' => $faker->sentence(5, true),
     ];
 });

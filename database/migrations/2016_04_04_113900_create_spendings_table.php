@@ -16,7 +16,7 @@ class CreateSpendingsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('amount');
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->integer('balance');
             $table->timestamps();
 
