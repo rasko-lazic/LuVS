@@ -8,8 +8,6 @@ class SpendingsTableSeeder extends Seeder
 {
     public function run()
     {
-        Spending::truncate();
-
-        factory(App\Spending::class, 10)->create();
+        factory(Spending::class, 10)->create();
     }
 }

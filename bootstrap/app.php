@@ -24,10 +24,11 @@ $app = new Laravel\Lumen\Application(
 );
 
 $app->withFacades();
-
-$app->configure('jwt');
-
 $app->withEloquent();
+
+// Register config files
+$app->configure('auth');
+$app->configure('jwt');
 
 class_alias('Tymon\JWTAuth\Facades\JWTAuth', 'JWTAuth');
 class_alias('Tymon\JWTAuth\Facades\JWTFactory', 'JWTFactory');
@@ -85,7 +86,7 @@ $app->singleton(
 |
 */
 
-//$app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
 //$app->register(App\Providers\AuthServiceProvider::class);
 //$app->register(App\Providers\EventServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class);

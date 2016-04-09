@@ -4,12 +4,10 @@ use Illuminate\Database\Seeder;
 use App\User;
 
 
-class UserTableSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     public function run()
     {
-        //User::truncate();
-
         factory(User::class, 1)->create();
     }
 }
