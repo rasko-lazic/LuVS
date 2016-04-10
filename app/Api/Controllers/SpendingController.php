@@ -14,6 +14,7 @@ class SpendingController extends BaseController
 
     public function index()
     {
-        return $this->collection(Spending::all(), new SpendingTransformer);
+        $spendings = Spending::paginate(5);
+        return $this->paginator($spendings, new SpendingTransformer);
     }
 }

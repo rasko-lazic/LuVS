@@ -13,7 +13,7 @@ $api = app(Dingo\Api\Routing\Router::class  );
 */
 
 $api->version('v1', function($api) {
-    $api->group(['namespace' => 'App\Api\Controllers', 'middleware' => 'auth:api'], function($api) {
+    $api->group(['namespace' => 'App\Api\Controllers'], function($api) {
         $api->post('test', function() use ($api) {
             dd($api);
         });
@@ -21,7 +21,7 @@ $api->version('v1', function($api) {
     });
 });
 $app->get('bla', function () use ($app) {
-    return $app->version();
+    return view('index');
 
     //dd($app);
 });

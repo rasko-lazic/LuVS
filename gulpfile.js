@@ -1,6 +1,11 @@
 //process.env.DISABLE_NOTIFIER = true;
 var elixir = require('laravel-elixir');
 
+elixir.config.js.browserify.transformers.push({
+    name: 'vueify',
+    options: {}
+});
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -13,5 +18,5 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.browserify('app.js');
+    mix.browserify('bootstrap.js', 'public/js/app.js');
 });
