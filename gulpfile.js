@@ -6,6 +6,13 @@ elixir.config.js.browserify.transformers.push({
     options: {}
 });
 
+elixir.config.js.browserify.watchify = {
+    enabled: true,
+    options: {
+        poll: true
+    }
+}
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management

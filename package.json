@@ -15,7 +15,8 @@
   "dependencies": {
     "jquery": "^2.2.2",
     "vue": "^1.0.20",
-    "vue-router": "^0.7.11"
+    "vue-router": "^0.7.11",
+    "vue-resource": "^0.7.0"
   },
   "name": "53spendings",
   "description": "spendings app",

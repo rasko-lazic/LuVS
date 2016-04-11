@@ -13019,7 +13019,7 @@ router.start(App, '#app');
 window.router = router;
 
 },{"./app.vue":6,"./routes":9,"vue":4,"vue-router":3}],8:[function(require,module,exports){
-var __vueify_style__ = require("vueify-insert-css").insert("\nh1[_v-ca7cba18] {\n    color: #9c0033;\n    text-align: center;\n}\n")
+var __vueify_style__ = require("vueify-insert-css").insert("\nh1[_v-ca7cba18] {\n    color: #9c0033;\n    text-align: center;\n}\n\np[_v-ca7cba18] {\n    color: #8080ff;\n    text-align: center;\n}\n")
 "use strict";
 
 module.exports = {
@@ -13027,17 +13027,27 @@ module.exports = {
         return {
             content: "This app is officially tested!!"
         };
+    },
+
+    methods: {
+        getRoot: function getRoot() {
+            console.log(this.$root);
+        },
+
+        greet: function greet() {
+            console.log('hello there');
+        }
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<h1 _v-ca7cba18=\"\">{{ content }}</h1>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<h1 _v-ca7cba18=\"\">{{ content }}</h1>\n<p _v-ca7cba18=\"\"><a v-link=\"{ path: '/' }\" @click=\"getRoot\" _v-ca7cba18=\"\">[UNTEST]</a></p>\n<button @click=\"greet\" _v-ca7cba18=\"\">Greet</button>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   var id = "/home/vagrant/Code/53spendings/resources/assets/js/components/test.vue"
   module.hot.dispose(function () {
-    require("vueify-insert-css").cache["\nh1[_v-ca7cba18] {\n    color: #9c0033;\n    text-align: center;\n}\n"] = false
+    require("vueify-insert-css").cache["\nh1[_v-ca7cba18] {\n    color: #9c0033;\n    text-align: center;\n}\n\np[_v-ca7cba18] {\n    color: #8080ff;\n    text-align: center;\n}\n"] = false
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
