@@ -1,6 +1,8 @@
 vendor/
 node_modules/
 
+.idea/
+
 # Laravel 4 specific
 bootstrap/compiled.php
 app/storage/
@@ -8,7 +10,7 @@ app/storage/
 # Laravel 5 & Lumen specific
 bootstrap/cache/
 storage/
+/npm-debug.log
 .env.*.php
 .env.php
 .env
-.env.example
