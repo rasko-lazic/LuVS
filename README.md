@@ -1,2 +1,2 @@
-# 53spendings
-spendings app
+# LuVS
+Lumen Vue Scafolding
