@@ -14,14 +14,18 @@ $api = app(Dingo\Api\Routing\Router::class  );
 
 $api->version('v1', function($api) {
     $api->group(['namespace' => 'App\Api\Controllers'], function($api) {
-        $api->post('test', function() use ($api) {
-            dd($api);
+
+        $api->post('login', 'AuthController@authenticate');
+        $api->post('register', 'AuthController@register');
+        $api->get('verify/{verification_string}', 'AuthController@verify');
+
+        $api->group( [ 'middleware' => 'jwt.auth' ], function ($api) {
+            $api->get('users/me', 'AuthController@me');
+            $api->get('validate_token', 'AuthController@validateToken');
         });
-        $api->get('spendings', 'SpendingController@index');
     });
 });
-$app->get('bla', function () use ($app) {
+$app->get('/', function () use ($app) {
+    
     return view('index');
-
-    //dd($app);
 });

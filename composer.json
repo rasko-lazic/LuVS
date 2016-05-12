@@ -11,12 +11,14 @@
         "dingo/api": "1.0.*@dev",
         "tymon/jwt-auth": "1.0.*@dev",
         "basicit/lumen-vendor-publish": "^1.0",
-        "irazasyed/jwt-auth-guard": "^1.0"
+        "irazasyed/jwt-auth-guard": "^1.0","doctrine/dbal": "^2.5",
+        "illuminate/mail": "^5.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "phpunit/phpunit": "~4.0",
-        "symfony/var-dumper": "^3.0"
+        "symfony/var-dumper": "^3.0",
+        "barryvdh/laravel-ide-helper": "^2.1"
     },
     "autoload": {
         "psr-4": {

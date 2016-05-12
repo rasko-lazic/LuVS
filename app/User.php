@@ -22,7 +22,7 @@ class User extends Model implements
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
+        'name', 'email', 'password', 'verification_string',
     ];
 
     /**
@@ -31,7 +31,7 @@ class User extends Model implements
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token'
+        'remember_token', 'password', 'verification_string', 'verified',
     ];
 
     /**

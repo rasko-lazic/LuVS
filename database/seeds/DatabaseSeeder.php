@@ -12,11 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
-        DB::statement("TRUNCATE TABLE spendings");
-        DB::statement("TRUNCATE TABLE users RESTART IDENTITY CASCADE");
-
         $this->call(UsersTableSeeder::class);
-        $this->call(SpendingsTableSeeder::class);
     }
 }

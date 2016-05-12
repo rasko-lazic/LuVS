@@ -14,29 +14,8 @@
   },
   "dependencies": {
     "jquery": "^2.2.2",
+    "rest": "^1.3.2",
     "vue": "^1.0.20",
-    "vue-router": "^0.7.11",
-    "vue-resource": "^0.7.0"
-  },
-  "name": "53spendings",
-  "description": "spendings app",
-  "version": "1.0.0",
-  "main": "gulpfile.js",
-  "directories": {
-    "test": ""
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/panos-zamos/53spendings.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/panos-zamos/53spendings/issues"
-  },
-  "homepage": "https://github.com/panos-zamos/53spendings#readme"
+    "vue-router": "^0.7.11"
+  }
 }

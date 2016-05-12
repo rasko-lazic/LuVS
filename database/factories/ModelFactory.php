@@ -18,12 +18,3 @@ $factory->define(App\User::class, function ($faker) {
         'password' => $faker->name,
     ];
 });
-
-$factory->define(App\Spending::class, function($faker) {
-    return [
-        'user_id' => 1,
-        'amount' => $faker->numberBetween($min = 1000, $max = 9000),
-        'description' => $faker->sentence(5, true),
-        'balance' => $faker->numberBetween($min = 5000, $max = 50000),
-    ];
-});
